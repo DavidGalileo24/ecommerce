@@ -8,5 +8,4 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-
-Route::get('/webhook', [ProductController::class, 'test']);
+Route::post('/webhook', [ProductController::class, 'test']);
